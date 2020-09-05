@@ -206,7 +206,7 @@ p{
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translate(-50%,80px);
+    transform: translate(-50%,100px);
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 18px;
