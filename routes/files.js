@@ -35,7 +35,7 @@ let upload = multer({
             });
 
                 const response = await file.save();
-                return res.status(500).send({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}`})
+                return res.status(200).send({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}`})
         }
     })
     })
@@ -65,7 +65,7 @@ let upload = multer({
                 expires: '24hrs',
             })
          })
-         return res.send({success : true})
+         return res.send({success : true}) 
     })
 
 module.exports = router;
