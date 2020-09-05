@@ -53,12 +53,12 @@ copyBtn.addEventListener('click', ()=>{
 })
 
 const uploadFile = () => {
+    const file = fileInput.files[0];
     if(fileInput.files.length > 1){
         resetFileInput()
         showToast("Upload only one file at a time");
         return 
     }
-    const file = fileInput.files[0];
     if(file.size > maxAllowedSize){
         showToast("Can't upload more than 100MB");
         resetFileInput();

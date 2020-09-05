@@ -22,7 +22,7 @@ let upload = multer({
         //Store file
         upload(req, res, async (err) => {
             // validate fields
-            if(!req.file) { return res.status(500).send({ errpr: 'All fields are required'}) };
+            if(!req.file) { return res.status(500).send({ error: 'All fields are required'}) };
             if(err) { return res.status(500).send({ error: err.message }) };
         
             if(req.file){
