@@ -16,11 +16,7 @@ app.use(express.static('public'));
 app.use(express.json())
 
 //Cors
-const corsOption = {
-    origin : process.env.ALLOWED_CLIENTS.split(','),
-    //[ 'http://localhost:5000', 'http://localhost:3000' ]
-}
-app.use(cors(corsOption));
+app.use(cors());
 //Routes
 app.use('/api/files',require('./routes/files'));
 app.use('/files', require('./routes/show'));
